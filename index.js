@@ -9,7 +9,7 @@ import {
   getMessaging,
   setBackgroundMessageHandler,
 } from '@react-native-firebase/messaging';
-import notifee, { AndroidImportance } from 'react-native-notify-kit';
+import notifee from 'react-native-notify-kit';
 const CHANNEL_ID = 'high_importance';
 
 setBackgroundMessageHandler(getMessaging(), async remoteMessage => {

@@ -30,6 +30,7 @@ const App = () => {
     // Recieve foreground messages
     const unsubscribe = onMessage(getMessaging(), async remoteMessage => {
       await notifee.displayNotification({
+        id: CHANNEL_ID, // this is notification id to make each notification unique
         title: remoteMessage.notification?.title,
         body: remoteMessage.notification?.body,
         android: {
